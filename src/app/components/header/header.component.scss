@@ -1,0 +1,21 @@
+.Header{
+    display: flex;
+    background-color: #212121;
+    height: 50px;
+    align-items: center;
+}
+
+.HeaderLogo{
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.HeaderTitle{
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+    font-family: montserrat;
+    cursor: pointer;
+}
