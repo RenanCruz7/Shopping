@@ -1,0 +1,16 @@
+<div class="product-card">
+    <div class="product-card-header">
+      <img class="product-image" [src]="product.imageUrl" alt="{{ product.name }}">
+      <div class="product-info">
+        <h2 class="product-title">{{ product.name }}</h2>
+        <p class="product-price">{{ product.price }}</p>
+      </div>
+    </div>
+    <div class="product-card-content">
+      <p>{{ product.description }}</p>
+    </div>
+    <div class="product-card-actions">
+      <button class="btn">Comprar</button>
+      <button class="btn">Carrinho</button>
+    </div>
+  </div>
