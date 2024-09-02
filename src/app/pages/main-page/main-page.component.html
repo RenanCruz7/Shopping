@@ -5,3 +5,8 @@
   }
 </div>
 <h2 class="section-title">Tecnologia</h2>
+<div class="center-products">
+  @for(technology of technologyData; track technology){
+    <app-card [product]="technology"></app-card>
+  }
+</div>
