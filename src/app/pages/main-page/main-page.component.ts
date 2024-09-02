@@ -8,29 +8,24 @@ import { TecnologyService } from '../../services/tecnology.service';
 @Component({
   selector: 'app-main-page',
   standalone: true,
-  imports: [CardComponent,HttpClientModule],
+  imports: [CardComponent],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss'
 })
 export class MainPageComponent implements OnInit {
-  promotionsData: Product[] = [];
+  promotionsData$: Product[] = [];
   technologyData: Product[] = [];
 
-  constructor(private promotionService: PromotionsService, private technologyService: TecnologyService ) { }
-  ngOnInit(): void {
-    this.getPromotions();
-    this.getTechnology();
-  }
-
-  getPromotions() {
-    this.promotionService.getPromotions().subscribe(promotions => {
-      this.promotionsData = promotions;
+  constructor(private promotionService: PromotionsService, private technologyService: TecnologyService) {
+    this.promotionService.promotions$.subscribe(promotions => {
+      this.promotionsData$ = promotions;
+    });
+    this.technologyService.technology$.subscribe(technology => {
+      this.technologyData = technology;
     });
   }
-
-  getTechnology() {
-    this.technologyService.getTechnology().subscribe(technology => {
-      this.technologyData = technology;
-  });
+  ngOnInit(): void {
+    this.promotionService.refreshPromotions();
+    this.technologyService.refreshTechnology();
   }
 }
