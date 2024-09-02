@@ -1,4 +1,4 @@
-import { Component,Input } from '@angular/core';
+import { Component,EventEmitter,Input, Output } from '@angular/core';
 import { Product } from '../../types/types';
 import { CommonModule } from '@angular/common';
 
@@ -11,4 +11,9 @@ import { CommonModule } from '@angular/common';
 })
 export class CardComponent {
   @Input() product!: Product;
+  @Output() buy = new EventEmitter<Product>();
+  
+  onBuy(): void {
+    this.buy.emit(this.product);
+  }
 }

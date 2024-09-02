@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Product } from '../types/types';
-import { BehaviorSubject, Observable, tap } from 'rxjs';
+import { BehaviorSubject, delay, Observable, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +14,7 @@ export class PromotionsService {
 
   getPromotions(): Observable<Product[]> {
     return this.http.get<Product[]>('http://localhost:3000/products-promotions').pipe(
+      delay(100),
       tap((promotions: Product[]) => this.promotionsSubject.next(promotions))
     );
   }

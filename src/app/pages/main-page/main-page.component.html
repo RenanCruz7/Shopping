@@ -1,12 +1,16 @@
+<app-header (openCartEvent)="toggleCart()"></app-header>
 <h1 class="section-title">Promoções</h1>
 <div class="center-products">
   @for(product of promotionsData$;track product ){
-    <app-card [product]="product"></app-card>
+    <app-card [product]="product" (buy)="onBuyProduct(product)"></app-card>
   }
 </div>
 <h2 class="section-title">Tecnologia</h2>
 <div class="center-products">
   @for(technology of technologyData; track technology){
-    <app-card [product]="technology"></app-card>
+    <app-card [product]="technology" (buy)="onBuyProduct(technology)"></app-card>
   }
 </div>
+@if (isCartOpen) {
+  <app-cart></app-cart>
+}
