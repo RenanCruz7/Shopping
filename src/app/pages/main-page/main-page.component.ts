@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { CardComponent } from '../../components/card/card.component';
 import { PromotionsService } from '../../services/promotions.service';
 import { Product } from '../../types/types';
@@ -36,5 +36,12 @@ export class MainPageComponent implements OnInit {
   }
   toggleCart(): void {
     this.isCartOpen = !this.isCartOpen;
+  }
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent): void {
+    const cartElement = document.querySelector('.cart-container');
+    if (this.isCartOpen && cartElement && !cartElement.contains(event.target as Node)) {
+      this.isCartOpen = false;
+    }
   }
 }
