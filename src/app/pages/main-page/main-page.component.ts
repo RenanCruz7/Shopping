@@ -12,7 +12,7 @@ import { CartComponent } from "../../components/cart/cart.component";
   standalone: true,
   imports: [CardComponent, HeaderComponent, CartComponent],
   templateUrl: './main-page.component.html',
-  styleUrl: './main-page.component.scss'
+  styleUrl: './main-page.component.scss',
 })
 export class MainPageComponent implements OnInit {
   promotionsData$: Product[] = [];
