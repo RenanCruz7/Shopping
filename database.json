@@ -46,42 +46,42 @@
 
     "products-tecnology":[
         {
-            "id": 1,
+            "id": 7,
             "name": "SSD NVME WD Black SN750",
             "price": 500,
             "imageUrl": "https://www.pcworld.com/wp-content/uploads/2022/12/wd-black-sn750-nvme-gaming-ssd-100786895-orig.jpg?quality=50&strip=all",
             "description": "Um SSD de alta performance para jogos"
         },
         {
-            "id": 2,
+            "id": 8,
             "name": "Placa de Vídeo RTX 4090",
             "price": 3500,
             "imageUrl": "https://cdn.awsli.com.br/2500x2500/1271/1271561/produto/180905814/ee2c8e9c55.jpg",
             "description": "Uma placa de vídeo de última geração para jogos"
         },
         {
-            "id": 3,
+            "id": 9,
             "name": "Ryzen 7 5800X3D",
             "price": 1200,
             "imageUrl": "https://www.pcgamesn.com/wp-content/sites/pcgamesn/2022/03/amd-ryzen-7-5800x3d-release-date-price.jpg",
             "description": "Um processador de última geração para jogos"
         },
         {
-            "id": 4,
+            "id": 10,
             "name": "Macbook Air",
             "price": 2000000,
             "imageUrl": "https://th.bing.com/th/id/R.1ae823e85399db640e8ba887dab4d04a?rik=Bcxa2oHpx4X6dA&riu=http%3a%2f%2fwww.ilounge.com%2fwp-content%2fuploads%2f2019%2f03%2fMacbook-Air-2018.jpeg&ehk=9Eyu2JqD%2bnEQjeJEr2oBpVGoz8tssNrpaECZqVx9d%2bA%3d&risl=&pid=ImgRaw&r=0",
             "description": "Um nobebok de alta performance"
         },
         {
-            "id": 5,
+            "id": 11,
             "name": "Nitro 5",
             "price": 5000,
             "imageUrl": "https://th.bing.com/th/id/R.9b7a088ac469235aad589ad5280cf547?rik=u1XGRM1hK8wbig&pid=ImgRaw&r=0",
             "description": "Um nobebok de alta performance para jogos"
         },
         {
-            "id": 6,
+            "id": 12,
             "name": "Mouse Gamer Fallen Pantera Pro",
             "price": 500,
             "imageUrl": "https://th.bing.com/th/id/R.1764251844bf6d637dda0d8254afb5ff?rik=KR4JPSqCtowhXg&pid=ImgRaw&r=0",

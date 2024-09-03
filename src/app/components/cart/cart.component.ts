@@ -17,4 +17,8 @@ export class CartComponent {
       this.cartItems = items;
     });
   }
+
+  removeFromCart(item: Product): void {
+    this.cartService.removeFromCart(item);
+  }
 }
